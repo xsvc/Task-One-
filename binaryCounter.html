@@ -3,11 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Powers of Two</title>
+    <title>Binary Counter</title>
     <link rel="stylesheet" href="mainSite.css">
     <script>
         function powers() {
-            alert("Complete Javascript, and disable this alert.");
+            let counter = 0;
+
+            document.getElementById("output").innerHTML = "";
+
+            while (counter <= 100) {
+                let powerOf = (2 ** counter);
+                document.getElementById("output").innerHTML += "2<sup>" + counter + "</sup> = " + powerOf + "<br>";
+                counter++;
+            }
         }
     </script>
 </head>
@@ -26,12 +34,12 @@
     </ul>
 </nav>
 
-<h1>Powers of Two</h1>
+<h1>Binary Counter</h1>
 
 <div class="grid-container">
     <div class="banner"><p>Binary is very important in Computer Science. Everything in a computer boils down to 0s and
         1s. With computers, you often see numbers appear regularly when discussing sizes of things - hard disks, SSDs,
-            memory, network traffic etc.</p>
+        memory, network traffic etc.</p>
         <p>This is all due to the powers of 2.</p>
         <p>When you have one bit, the value can be 0 or 1. So there are 2 possibilities - 0 and 1.</p>
         <p>When you have two bits, there are 4 possibilities - 00, 01, 10 and 11</p>
@@ -41,7 +49,7 @@
         <p>Student Note: the code should loop, showing the calculations of 2<sup>0</sup> through to 2<sup>100</sup></p>
     </div>
     <div>
-        <p>Press this button to show the first 50 Powers of Two.</p>
+        <p>Press this button to show the first 100 Powers of Two.</p>
 
         <button onclick="powers()">Click Here</button>
     </div>
