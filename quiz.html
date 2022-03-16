@@ -7,7 +7,34 @@
     <link rel="stylesheet" href="mainSite.css">
     <script>
         function checkAnswers(form) {
-            alert("Complete Javascript, and disable this alert.");
+            const answers = []
+            answers[0] = form.inputOne.value
+            answers[1] = form.inputTwo.value
+            answers[2] = form.inputThree.value
+
+            if (answers[0] == "One") {
+                document.getElementById("outputOne").style.color = "green";
+                document.getElementById("outputOne").innerHTML = "Correct!";
+            } else {
+                document.getElementById("outputOne").style.color = "red";
+                document.getElementById("outputOne").innerHTML = "Incorrect";
+            }
+
+            if (answers[1] == "Two") {
+                document.getElementById("outputTwo").style.color = "green";
+                document.getElementById("outputTwo").innerHTML = "Correct!";
+            } else {
+                document.getElementById("outputTwo").style.color = "red";
+                document.getElementById("outputTwo").innerHTML = "Incorrect";
+            }
+
+            if (answers[2] == "Three") {
+                document.getElementById("outputThree").style.color = "green";
+                document.getElementById("outputThree").innerHTML = "Correct!";
+            } else {
+                document.getElementById("outputThree").style.color = "red";
+                document.getElementById("outputThree").innerHTML = "Incorrect";
+            }
         }
     </script>
 </head>

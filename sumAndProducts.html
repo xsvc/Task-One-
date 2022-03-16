@@ -3,11 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Sum and Product</title>
     <link rel="stylesheet" href="mainSite.css">
     <script>
         function randomNumberGenerator(nums) {
-            alert("Complete Javascript, and disable this alert.");
+            let generateAmount = prompt("How many random numbers will be generated?");
+
+            let randomValues = [];
+
+            for (let loopCounter = 0; loopCounter<generateAmount; loopCounter++) {
+                let randomNumber = Math.random() * 100;
+                randomValues[loopCounter] = randomNumber;
+            }
+
+            const numberDetails = {
+                sum: 0,
+                product: 1
+            }
+
+            for (let loopCounter = 0; loopCounter<generateAmount; loopCounter++) {
+                numberDetails["sum"] = numberDetails["sum"] + randomValues[loopCounter];
+                numberDetails["product"] = numberDetails["product"] * randomValues[loopCounter];
+            }
+
+            document.getElementById("randomNumbersOutput").innerHTML = "Sum: " + numberDetails["sum"] + "<br>" + "Product: " + numberDetails["product"];
         }
     </script>
     <style>

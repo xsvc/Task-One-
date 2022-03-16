@@ -7,7 +7,22 @@
     <link rel="stylesheet" href="mainSite.css">
     <script>
         function convertBits(form) {
-            alert("Complete Javascript, and disable this alert.");
+            // 1. Input - read in the individual values
+            let bits = [0, 0, 0, 0, 0, 0, 0, 0];
+            bits[0] = parseInt(form.input128.value);
+            bits[1] = parseInt(form.input64.value);
+            bits[2] = parseInt(form.input32.value);
+            bits[3] = parseInt(form.input16.value);
+            bits[4] = parseInt(form.input8.value);
+            bits[5] = parseInt(form.input4.value);
+            bits[6] = parseInt(form.input2.value);
+            bits[7] = parseInt(form.input1.value);
+
+            // 2. Processing - convert to int, and then into decimal.
+            let num = +bits.join("");
+            let answer = parseInt(num,2);
+            // 3. Output - the answer
+            document.getElementById("output").innerHTML = answer;
         }
     </script>
 </head>

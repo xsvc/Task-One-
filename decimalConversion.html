@@ -7,8 +7,26 @@
     <link rel="stylesheet" href="mainSite.css">
     <script>
         function startConversionProcess() {
-            alert("Complete Javascript, and disable this alert.");
+            let decimal = parseInt(prompt("Enter a number"));
+
+            convertToBinary(decimalNumberToConvert = decimal);
+
+            convertToHexadecimal(decimalNumberToConvert = decimal);
+
+            document.getElementById("outputBinary").innerHTML = "Binary: " + binary;
+            document.getElementById("outputHexadecimal").innerHTML = "Hexadecimal: " + hexadecimal;
         }
+
+        function convertToBinary(decimalNumberToConvert) {
+            binary = decimalNumberToConvert.toString(2);
+            return binary;
+        }
+
+        function convertToHexadecimal(decimalNumberToConvert) {
+            hexadecimal = decimalNumberToConvert.toString(16);
+            return hexadecimal;
+        }
+
     </script>
 </head>
 
