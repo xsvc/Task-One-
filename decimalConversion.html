@@ -6,25 +6,27 @@
     <title>Decimal Conversion</title>
     <link rel="stylesheet" href="mainSite.css">
     <script>
+        let decimalInput; // global variable
+
         function startConversionProcess() {
-            let decimal = parseInt(prompt("Enter a number"));
+            // Input: ask for binary number through prompt.
+            decimalInput = parseInt(prompt("Please enter a decimal (base 10) number"));
+            // functions calls
+            convertToBinary();
+            // let hex = convertToHexadecimal(decimalInput);
+            // document.getElementById("outputHexadecimal").innerHTML = hex;
 
-            convertToBinary(decimalNumberToConvert = decimal);
-
-            convertToHexadecimal(decimalNumberToConvert = decimal);
-
-            document.getElementById("outputBinary").innerHTML = "Binary: " + binary;
-            document.getElementById("outputHexadecimal").innerHTML = "Hexadecimal: " + hexadecimal;
+            document.getElementById("outputHexadecimal").innerHTML = convertToHexadecimal(decimalInput);
         }
 
-        function convertToBinary(decimalNumberToConvert) {
-            binary = decimalNumberToConvert.toString(2);
-            return binary;
+        function convertToBinary() {
+            let binaryEquivalent = decimalInput.toString(2);
+            document.getElementById("outputBinary").innerHTML = binaryEquivalent;
         }
 
         function convertToHexadecimal(decimalNumberToConvert) {
-            hexadecimal = decimalNumberToConvert.toString(16);
-            return hexadecimal;
+            let hexadecimalEquivalent = decimalNumberToConvert.toString(16);
+            return hexadecimalEquivalent;
         }
 
     </script>
