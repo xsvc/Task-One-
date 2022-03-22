@@ -7,33 +7,31 @@
     <link rel="stylesheet" href="mainSite.css">
     <script>
         function checkAnswers(form) {
+            //stores users' inputs into an array
             const answers = []
             answers[0] = form.inputOne.value
             answers[1] = form.inputTwo.value
             answers[2] = form.inputThree.value
 
-            if (answers[0] == "One") {
-                document.getElementById("outputOne").style.color = "green";
-                document.getElementById("outputOne").innerHTML = "Correct!";
-            } else {
-                document.getElementById("outputOne").style.color = "red";
-                document.getElementById("outputOne").innerHTML = "Incorrect";
+            //checks if first answer is correct
+            if (answers[0] == 90){
+                document.getElementById("outputOne").innerHTML = "<p style='color: green'>Correct!</p>";
+            } else { //if answer is incorrect
+                document.getElementById("outputOne").innerHTML = "<p style='color: red'>Incorrect</p>";
             }
 
-            if (answers[1] == "Two") {
-                document.getElementById("outputTwo").style.color = "green";
-                document.getElementById("outputTwo").innerHTML = "Correct!";
-            } else {
-                document.getElementById("outputTwo").style.color = "red";
-                document.getElementById("outputTwo").innerHTML = "Incorrect";
+            //checks if second answer is correct
+            if (answers[1] == 67){
+                document.getElementById("outputTwo").innerHTML = "<p style='color: green'>Correct!</p>";
+            } else { //if answer is incorrect
+                document.getElementById("outputTwo").innerHTML = "<p style='color: red'>Incorrect</p>";
             }
 
-            if (answers[2] == "Three") {
-                document.getElementById("outputThree").style.color = "green";
-                document.getElementById("outputThree").innerHTML = "Correct!";
-            } else {
-                document.getElementById("outputThree").style.color = "red";
-                document.getElementById("outputThree").innerHTML = "Incorrect";
+            //checks if third answer is correct
+            if (answers[2] == 2905){
+                document.getElementById("outputThree").innerHTML = "<p style='color: green'>Correct!</p>";
+            } else { //if answer is incorrect
+                document.getElementById("outputThree").innerHTML = "<p style='color: red'>Incorrect</p>";
             }
         }
     </script>
