@@ -8,10 +8,13 @@
 
     <script>
         function twoToThePowerOf(form) {
-            let input = form.powerValue.value
+            //stores users' input in aa variable
+            let input = form.powerValue.value;
 
-            let answer = Math.pow(input, 2);
+            //calculates the input to the power of 2
+            let answer = Math.pow(input, 2)
 
+            //outputs the answer
             document.getElementById("powerResult").innerHTML = answer;
         }
     </script>

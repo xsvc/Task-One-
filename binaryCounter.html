@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="mainSite.css">
     <script>
         function powers() {
+            // This sets the counter variable
             let counter = 0;
-
+            // This sets output to nothing (gets rid of "Output" word in output)
             document.getElementById("output").innerHTML = "";
 
+            //while the counter is less that or equal to 100
             while (counter <= 100) {
+                //calculates 2 to the power of the counter
                 let powerOf = (2 ** counter);
+                //outputs the power of answer and breaks line
                 document.getElementById("output").innerHTML += "2<sup>" + counter + "</sup> = " + powerOf + "<br>";
+                //adds + 1 to the counter
                 counter++;
             }
         }

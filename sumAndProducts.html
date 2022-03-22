@@ -7,25 +7,31 @@
     <link rel="stylesheet" href="mainSite.css">
     <script>
         function randomNumberGenerator(nums) {
+            //input for user to choose how many numbers will be generated
             let generateAmount = prompt("How many random numbers will be generated?");
 
+            //sets variable
             let randomValues = [];
 
+            //generates amount of random numbers (0-100) that user inputted
             for (let loopCounter = 0; loopCounter<generateAmount; loopCounter++) {
                 let randomNumber = Math.random() * 100;
                 randomValues[loopCounter] = randomNumber;
             }
 
+            //storage of sum and product of random numbers generated
             const numberDetails = {
                 sum: 0,
                 product: 1
             }
 
-            for (let loopCounter = 0; loopCounter<generateAmount; loopCounter++) {
+            //calculates the sum and product of the random numbers that were generated
+            for (let loopCounter = 0; loopCounter < generateAmount; loopCounter++) {
                 numberDetails["sum"] = numberDetails["sum"] + randomValues[loopCounter];
-                numberDetails["product"] = numberDetails["product"] * randomValues[loopCounter];
+                numberDetails["product"] = numberDetails["product"] * randomValues[loopCounter]
             }
 
+            //outputs the calculation onto the page
             document.getElementById("randomNumbersOutput").innerHTML = "Sum: " + numberDetails["sum"] + "<br>" + "Product: " + numberDetails["product"];
         }
     </script>

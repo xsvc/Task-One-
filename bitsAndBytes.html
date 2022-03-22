@@ -7,22 +7,25 @@
     <link rel="stylesheet" href="mainSite.css">
     <script>
         function convertBits(form) {
-            // 1. Input - read in the individual values
-            let bits = [0, 0, 0, 0, 0, 0, 0, 0];
-            bits[0] = parseInt(form.input128.value);
-            bits[1] = parseInt(form.input64.value);
-            bits[2] = parseInt(form.input32.value);
-            bits[3] = parseInt(form.input16.value);
-            bits[4] = parseInt(form.input8.value);
-            bits[5] = parseInt(form.input4.value);
-            bits[6] = parseInt(form.input2.value);
-            bits[7] = parseInt(form.input1.value);
+            //stores users' inputs into an array
+            const input = []
+            input[0] = form.input128.value
+            input[1] = form.input64.value
+            input[2] = form.input32.value
+            input[3] = form.input16.value
+            input[4] = form.input8.value
+            input[5] = form.input4.value
+            input[6] = form.input2.value
+            input[7] = form.input1.value
 
-            // 2. Processing - convert to int, and then into decimal.
-            let num = +bits.join("");
-            let answer = parseInt(num,2);
-            // 3. Output - the answer
-            document.getElementById("output").innerHTML = answer;
+            //joins the inputs in the array to binary number
+            let binary = +input.join("");
+
+            //converts binary number to decimal
+            let decimal = parseInt(binary, 2);
+
+            //displays decimal number on page
+            document.getElementById("output").innerHTML = decimal;
         }
     </script>
 </head>
